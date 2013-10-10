@@ -14,55 +14,55 @@ import com.sandwich.koan.Koan;
 
 public class AboutAssertions {
 
-	@Koan
+	@Koan 
 	public void assertBooleanTrue() {
-		assertTrue(true); // should be true really
+		assertTrue(__); // should be true really
 	}
 
 	@Koan
 	public void assertBooleanFalse() {
-		assertFalse(false);
+		assertFalse(__); 
 	}
-
+	
 	@Koan
 	public void assertNullObject(){
-		assertNull(null);
+		assertNull(__);
 	}
-
+	
 	@Koan
 	public void assertNotNullObject(){
-		assertNotNull(true); // anything other than null should pass here...
+		assertNotNull(null); // anything other than null should pass here...
 	}
 
 	@Koan
 	public void assertEqualsUsingExpression(){
-		assertTrue("Hello World!".equals("Hello World!"));
+		assertTrue("Hello World!".equals(__));
 	}
 
 	@Koan
 	public void assertEqualsWithBetterFailureMessage(){
-		assertEquals(1, 1);
+		assertEquals(1, __);
 	}
 
 	@Koan
 	public void assertEqualsWithDescriptiveMessage() {
-		// Generally, when using an assertXXX methods, expectation is on the
-		// left and it is best practice to use a String for the first arg
+		// Generally, when using an assertXXX methods, expectation is on the 
+		// left and it is best practice to use a String for the first arg 
 		// indication what has failed
-		assertEquals("The answer to 'life the universe and everything' should be 42", 42, 42);
+		assertEquals("The answer to 'life the universe and everything' should be 42", 42, __);
 	}
-
+	
 	@Koan
 	public void assertSameInstance(){
 		Object same				= new Integer(1);
-		Object sameReference	= same;
+		Object sameReference	= __;
 		assertSame(same, sameReference);
 	}
-
+	
 	@Koan
 	public void assertNotSameInstance(){
 		Integer same           = new Integer(1);
-		Integer sameReference  = 1;
-		assertNotSame(same, sameReference);
+		Integer sameReference  = same;
+		assertNotSame(same, sameReference); 
 	}
 }
